@@ -26,7 +26,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* background-image: url('fondo.jpg');  <-- Eliminada esta línea */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -84,7 +83,7 @@ section {
   margin-right: 15px;
 }
 
-/* Colores hover para habilidades */
+/* Hover effects para habilidades */
 .python:hover { box-shadow: 0 0 10px #ffd43b, 0 0 20px #306998; }
 .html-css:hover { box-shadow: 0 0 10px #e34c26, 0 0 20px #264de4; }
 .javascript:hover { box-shadow: 0 0 10px #f7df1e; }
@@ -93,24 +92,40 @@ section {
 .illustrator:hover { box-shadow: 0 0 10px #ff9a00; }
 .photoshop:hover { box-shadow: 0 0 10px #00c8ff; }
 
+/* Tarjetas de proyectos y certificados */
 .project-card, .certificate-card {
   background: #1e1e1e;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px;
+  overflow: hidden;
 }
+
 .project-card:hover, .certificate-card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 35px #0d6efdaa;
 }
+
 .project-card img, .certificate-card img {
   width: 100%;
+  height: auto;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  display: block;
 }
+
 .project-card .content, .certificate-card .content {
   padding: 20px;
+  color: #fff;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0d6efd;
+}
+
+.project-card p {
+  color: #e0e0e0;
 }
 
 /* Contacto */
@@ -121,6 +136,7 @@ section {
   margin: 0 auto;
   text-align: left;
 }
+
 #contact li {
   display: flex;
   align-items: center;
@@ -129,6 +145,7 @@ section {
   margin-bottom: 16px;
   color: #ddd;
 }
+
 #contact li img.icon-contact {
   width: 24px;
   height: 24px;
@@ -145,10 +162,7 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* ============================================= */
-/* Cambios para texto blanco en secciones principales */
-/* ============================================= */
-
+/* Colores blancos en secciones */
 #about,
 #skills,
 #projects,
@@ -165,4 +179,12 @@ footer {
 #contact ul,
 #contact li {
   color: #fff !important;
+}
+
+/* 💡 Nueva sección: proyectos en cuadrícula responsiva */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }

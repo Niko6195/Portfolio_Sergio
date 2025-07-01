@@ -25,15 +25,17 @@ function Projects() {
   return (
     <section id="projects">
       <h2>Proyectos</h2>
-      {projects.map((project, index) => (
-        <div key={index} className="project-card">
-          <img src={project.img} alt={project.title} />
-          <div className="content">
-            <h3>{project.title}</h3>
-            <p>{project.desc}</p>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <img src={project.img} alt={project.title} />
+            <div className="content">
+              <h3>{project.title}</h3>
+              <p>{project.desc}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }
