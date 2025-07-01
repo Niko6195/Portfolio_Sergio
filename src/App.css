@@ -1,0 +1,168 @@
+body {
+  background: linear-gradient(135deg, #0a0f1a, #111827);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #0a0f1a;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background-image: url('fondo.jpg');  <-- Eliminada esta línea */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 15, 26, 0.85);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #e0e0e0;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 { margin-bottom: 5px; }
+
+h2 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+  color: #0d6efd;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Habilidades */
+.skill-item {
+  background-color: #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover { transform: scale(1.02); }
+
+.skill-item img.icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  margin-right: 15px;
+}
+
+/* Colores hover para habilidades */
+.python:hover { box-shadow: 0 0 10px #ffd43b, 0 0 20px #306998; }
+.html-css:hover { box-shadow: 0 0 10px #e34c26, 0 0 20px #264de4; }
+.javascript:hover { box-shadow: 0 0 10px #f7df1e; }
+.os:hover { box-shadow: 0 0 15px #ffffff; }
+.excel:hover { box-shadow: 0 0 10px #217346; }
+.illustrator:hover { box-shadow: 0 0 10px #ff9a00; }
+.photoshop:hover { box-shadow: 0 0 10px #00c8ff; }
+
+.project-card, .certificate-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+.project-card:hover, .certificate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 35px #0d6efdaa;
+}
+.project-card img, .certificate-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.project-card .content, .certificate-card .content {
+  padding: 20px;
+}
+
+/* Contacto */
+#contact ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+#contact li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #ddd;
+}
+#contact li img.icon-contact {
+  width: 24px;
+  height: 24px;
+  filter: invert(90%);
+  flex-shrink: 0;
+}
+
+footer {
+  background: #111827;
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* ============================================= */
+/* Cambios para texto blanco en secciones principales */
+/* ============================================= */
+
+#about,
+#skills,
+#projects,
+#certificates,
+#contact {
+  color: #fff !important;
+}
+
+#about p,
+#skills p,
+#projects p,
+#certificates p,
+#contact p,
+#contact ul,
+#contact li {
+  color: #fff !important;
+}
